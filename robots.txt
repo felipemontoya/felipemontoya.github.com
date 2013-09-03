@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://felipemontoya.github.com/sitemap.xml 
+Sitemap: http://felipemontoya.co/sitemap.xml 

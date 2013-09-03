@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Personal | El palacio de la longaniza digital]]></title>
-  <link href="http://felipemontoya.github.com/blog/categories/personal/atom.xml" rel="self"/>
-  <link href="http://felipemontoya.github.com/"/>
-  <updated>2013-09-03T04:31:12+00:00</updated>
-  <id>http://felipemontoya.github.com/</id>
+  <link href="http://felipemontoya.co/blog/categories/personal/atom.xml" rel="self"/>
+  <link href="http://felipemontoya.co/"/>
+  <updated>2013-09-03T05:13:11+00:00</updated>
+  <id>http://felipemontoya.co/</id>
   <author>
     <name><![CDATA[Felipe Montoya]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Sigan que si hay]]></title>
-    <link href="http://felipemontoya.github.com/blog/2013/09/03/sigan-que-si-hay/"/>
+    <link href="http://felipemontoya.co/blog/2013/09/03/sigan-que-si-hay/"/>
     <updated>2013-09-03T03:54:00+00:00</updated>
-    <id>http://felipemontoya.github.com/blog/2013/09/03/sigan-que-si-hay</id>
+    <id>http://felipemontoya.co/blog/2013/09/03/sigan-que-si-hay</id>
     <content type="html"><![CDATA[<h2>Una corta introducción</h2>
 
 <p>Acabamos.</p>
