@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://felipemontoya.github.com/sitemap.xml 
