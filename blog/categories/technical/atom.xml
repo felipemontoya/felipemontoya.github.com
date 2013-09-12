@@ -4,7 +4,7 @@
   <title><![CDATA[Category: technical | El palacio de la longaniza digital]]></title>
   <link href="http://felipemontoya.co/blog/categories/technical/atom.xml" rel="self"/>
   <link href="http://felipemontoya.co/"/>
-  <updated>2013-09-12T17:00:39+00:00</updated>
+  <updated>2013-09-12T17:09:28+00:00</updated>
   <id>http://felipemontoya.co/</id>
   <author>
     <name><![CDATA[Felipe Montoya]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Adding newrelic to a django service using upstart]]></title>
-    <link href="http://felipemontoya.co/blog/2013/09/12/adding-newrelic-to-a-django-service-using-upstart/"/>
+    <link href="http://felipemontoya.co/blog/adding-newrelic-to-a-django-service-using-upstart/"/>
     <updated>2013-09-12T16:16:00+00:00</updated>
-    <id>http://felipemontoya.co/blog/2013/09/12/adding-newrelic-to-a-django-service-using-upstart</id>
+    <id>http://felipemontoya.co/blog/adding-newrelic-to-a-django-service-using-upstart</id>
     <content type="html"><![CDATA[<p>Some context: I am running a production instance of edx’s platform. This means I am dealing here with django on a nginx + gunicorn + virtualenv stack. This is managed using upstart on ubuntu 12.04.2 LTS.</p>
 
 <p>Back to the main topic, in case you are trying to use gunicorn and newrelic on a somewhat similar configuration this experience I had today might be of some use.</p>

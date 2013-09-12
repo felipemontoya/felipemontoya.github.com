@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Adding newrelic to a django service using upstart - El palacio de la longaniza digital</title>
+  <title>Sigan que si hay - El palacio de la longaniza digital</title>
   <meta name="author" content="Felipe Montoya">
 
   
-  <meta name="description" content="Some context: I am running a production instance of edx’s platform. This means I am dealing here with django on a nginx + gunicorn + virtualenv &hellip;">
+  <meta name="description" content="Una corta introducción Acabamos. Si tan solo todo fuera tan fácil. La verdad hasta ahora empiezo. Este espacio lo usaré para hacer reviews de &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://felipemontoya.co/blog/2013/09/12/adding-newrelic-to-a-django-service-using-upstart">
+  <link rel="canonical" href="http://felipemontoya.co/blog/sigan-que-si-hay">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="El palacio de la longaniza digital" type="application/atom+xml">
@@ -80,7 +80,7 @@
   
   <header>
     
-      <h1 class="entry-title">Adding Newrelic to a Django Service Using Upstart</h1>
+      <h1 class="entry-title">Sigan Que Si Hay</h1>
     
     
       <p class="meta">
@@ -96,41 +96,22 @@
   
 
 
-<time datetime="2013-09-12T16:16:00+00:00" pubdate data-updated="true">Sep 12<span>th</span>, 2013</time>
+<time datetime="2013-09-03T03:54:00+00:00" pubdate data-updated="true">Sep 3<span>rd</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Some context: I am running a production instance of edx’s platform. This means I am dealing here with django on a nginx + gunicorn + virtualenv stack. This is managed using upstart on ubuntu 12.04.2 LTS.</p>
+<div class="entry-content"><h2>Una corta introducción</h2>
 
-<p>Back to the main topic, in case you are trying to use gunicorn and newrelic on a somewhat similar configuration this experience I had today might be of some use.</p>
+<p>Acabamos.</p>
 
-<!-- more -->
+<p>Si tan solo todo fuera tan fácil. La verdad hasta ahora empiezo. Este espacio lo usaré para hacer reviews de cosas que me agradan, para criticar aquellas que no me agradan y para compartir snippets de código cuando lo considere necesario.</p>
 
+<p>Solo quería avisarles.</p>
 
-<p>As I said, the django service uses gunicorn as it’s WSGI Http server. To start the service I normally call: $ sudo start edxapp. This runs an upstart script that works using the next line:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>exec /opt/edx/bin/gunicorn --preload -b 127.0.0.1:$PORT -w $WORKERS --timeout=300 --pythonpath=/opt/wwc/edx-platform lms.wsg</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The script is located at <code>/etc/init/edxapp.conf</code></p>
-
-<p>I decided to start using new-relic to monitor this service, so I needed it to start using the new relic agent. The upstart scripts had some env variables for newrelic commented out, but setting them right did not go all the way to make me happy.</p>
-
-<p>After some <a href="https://newrelic.com/docs/python/python-agent-and-gunicorn">search</a>, some gessing and some trial and error I got it.</p>
-
-<p>In short here it is:</p>
-
-<ol>
-<li>Make sure you installed the new <a href="https://newrelic.com/docs/python/python-agent-installation">relic agent</a>. Change your newrelic.ini as you need to and <a href="https://newrelic.com/docs/python/testing-the-python-agent">test it</a> to be sure you got it right.</li>
-<li>Define the environment variable inside the upstart script: <code>env NEW_RELIC_CONFIG_FILE=/opt/wwc/newrelic.ini</code></li>
-<li>Use the new relic agent admin to call the gunicorn process: <code>exec /opt/edx/bin/newrelic-admin run-program /opt/edx/bin/gunicorn --preload -b 127.0.0.1:$PORT -w $WORKERS --timeout=300 --pythonpath=/opt/wwc/edx-platform lms.wsgi</code></li>
-<li><code>$ sudo start edxapp</code></li>
-</ol>
-
+<p>Hasta la próxima.</p>
 </div>
 
 
@@ -153,12 +134,12 @@
   
 
 
-<time datetime="2013-09-12T16:16:00+00:00" pubdate data-updated="true">Sep 12<span>th</span>, 2013</time>
+<time datetime="2013-09-03T03:54:00+00:00" pubdate data-updated="true">Sep 3<span>rd</span>, 2013</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/edx/'>edx</a>, <a class='category' href='/blog/categories/technical/'>technical</a>
+    <a class='category' href='/blog/categories/personal/'>Personal</a>
   
 </span>
 
@@ -167,7 +148,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://felipemontoya.co/blog/2013/09/12/adding-newrelic-to-a-django-service-using-upstart/" data-via="FelipeM_ntoya" data-counturl="http://felipemontoya.co/blog/2013/09/12/adding-newrelic-to-a-django-service-using-upstart/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://felipemontoya.co/blog/sigan-que-si-hay/" data-via="FelipeM_ntoya" data-counturl="http://felipemontoya.co/blog/sigan-que-si-hay/" >Tweet</a>
   
   
   
@@ -176,8 +157,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/09/03/sigan-que-si-hay/" title="Previous Post: Sigan que si hay">&laquo; Sigan que si hay</a>
       
+        <a class="basic-alignment right" href="/blog/adding-newrelic-to-a-django-service-using-upstart/" title="Next Post: Adding newrelic to a django service using upstart">Adding newrelic to a django service using upstart &raquo;</a>
       
     </p>
   </footer>
@@ -198,11 +179,11 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2013/09/12/adding-newrelic-to-a-django-service-using-upstart/">Adding Newrelic to a Django Service Using Upstart</a>
+        <a href="/blog/adding-newrelic-to-a-django-service-using-upstart/">Adding Newrelic to a Django Service Using Upstart</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2013/09/03/sigan-que-si-hay/">Sigan Que Si Hay</a>
+        <a href="/blog/sigan-que-si-hay/">Sigan Que Si Hay</a>
       </li>
     
   </ul>
@@ -260,8 +241,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://felipemontoya.co/blog/2013/09/12/adding-newrelic-to-a-django-service-using-upstart/';
-        var disqus_url = 'http://felipemontoya.co/blog/2013/09/12/adding-newrelic-to-a-django-service-using-upstart/';
+        var disqus_identifier = 'http://felipemontoya.co/blog/sigan-que-si-hay/';
+        var disqus_url = 'http://felipemontoya.co/blog/sigan-que-si-hay/';
         var disqus_script = 'embed.js';
       
     (function () {
