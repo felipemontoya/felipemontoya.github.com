@@ -5,12 +5,18 @@
         <lastmod>2013-09-03T04:14:57+00:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://felipemontoya.co/blog/2013/09/12/adding-newrelic-to-a-django-service-using-upstart/
+        </loc>
+        <lastmod>2013-09-12T17:00:33+00:00</lastmod>
+    </url>
+    <url>
         <loc>http://felipemontoya.co/blog/archives/</loc>
-        <lastmod>2013-09-03T04:14:57+00:00</lastmod>
+        <lastmod>2013-09-12T17:00:33+00:00</lastmod>
     </url>
     <url>
         <loc>http://felipemontoya.co/</loc>
-        <lastmod>2013-09-03T04:14:57+00:00</lastmod>
+        <lastmod>2013-09-12T17:00:33+00:00</lastmod>
     </url>
     <url>
         <loc>http://felipemontoya.co/robots.txt</loc>
