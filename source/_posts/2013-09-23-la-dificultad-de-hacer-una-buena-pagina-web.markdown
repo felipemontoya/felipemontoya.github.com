@@ -16,6 +16,8 @@ Para juzgar una página web y poder decir que es buena o mala, es necesario eval
 + Workflow del usuario
 + SEO (Solo si estas buscando que alguien encuentre o visite la página)
 
+<!-- more -->
+
 Así como vamos, esto se ve mal. Ahora la verdad es que se pone peor.
 
 ### Diseño gráfico
